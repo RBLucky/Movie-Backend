@@ -1,6 +1,6 @@
 import mongodb from "mongodb";
 
-const ObjectId = mongodb.ObjectID;
+const ObjectId = mongodb.ObjectId;
 
 let movies; //store reference to database
 
@@ -61,7 +61,7 @@ export default class MoviesDAO {
       ratings = await movies.distinct("rated");
       return ratings;
     } catch (e) {
-      console.error(`unable to get ratings, $(e)`);
+      console.error(`unable to get ratings, ${e}`);
       return ratings;
     }
   }
